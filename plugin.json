@@ -1,0 +1,20 @@
+{
+  "name": "skills",
+  "description": "A GitHub Copilot CLI plugin built around a routing facade, Microsoft knowledge skills, and action skills for canvas and WPF work.",
+  "version": "1.0.0",
+  "keywords": [
+    "github-copilot-cli",
+    "copilot-plugin",
+    "skills",
+    "routing",
+    "microsoft",
+    "wpf"
+  ],
+  "skills": [
+    "go",
+    "canvas",
+    "wpf",
+    "microsoft-docs",
+    "microsoft-code-reference"
+  ]
+}

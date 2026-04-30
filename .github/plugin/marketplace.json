@@ -1,0 +1,29 @@
+{
+  "name": "orrest",
+  "owner": {
+    "name": "Orrest"
+  },
+  "metadata": {
+    "description": "Marketplace for Orrest's GitHub Copilot CLI plugins.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "skills",
+      "description": "A GitHub Copilot CLI plugin that bundles Orrest's reusable skills.",
+      "version": "1.0.0",
+      "source": ".",
+      "repository": "https://github.com/orrest/skills.git",
+      "keywords": [
+        "github-copilot-cli",
+        "copilot-plugin",
+        "skills"
+      ],
+      "skills": [
+        "clarify",
+        "learn",
+        "craft"
+      ]
+    }
+  ]
+}
