@@ -12,7 +12,7 @@ Use `wpf` for implementation work on a WPF application that follows the prescrib
 ## Flow
 
 1. Restate the requested WPF deliverable and the files or project surface it will touch.
-2. If framework behavior, package usage, or API details are unclear, invoke `microsoft-docs` or `microsoft-code-reference` first and keep that evidence available.
+2. If framework behavior, package usage, or API details are unclear, invoke `learn` first and keep that evidence available.
 3. Shape the work around the stack profile: WPF views, MVVM view models, DI registration, EF Core persistence, and SQLite local storage.
 4. Execute the implementation in a single worker flow, reusing local templates or scripts when they already exist.
 5. Return the concrete code or file changes and stop.
@@ -34,8 +34,7 @@ Use `wpf` for implementation work on a WPF application that follows the prescrib
 
 ## Preferred hand-offs
 
-- Use `microsoft-docs` when the task depends on official framework behavior, configuration, or platform guidance.
-- Use `microsoft-code-reference` when exact namespaces, APIs, sample patterns, or package usage matter.
+- Use `learn` when the task depends on official framework behavior, configuration, platform guidance, or exact namespaces, APIs, sample patterns, and package usage.
 
 ## Hard Rules
 

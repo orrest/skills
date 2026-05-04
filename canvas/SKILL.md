@@ -1,6 +1,6 @@
 ---
 name: canvas
-description: Invoke when the best deliverable is a browser-ready HTML canvas that explains a workflow, process, architecture, or object map visually. Produces the final HTML artifact using the local canvas references and template. Not for open-ended planning, prose-only answers, or code implementation.
+description: Invoke when the best deliverable is a browser-ready HTML canvas that explains a workflow, process, architecture, or object relationships visually. Produces the final HTML artifact using the local canvas template. Not for open-ended planning, prose-only answers, or code implementation.
 metadata:
   version: "1.0.0"
 ---
@@ -9,12 +9,10 @@ metadata:
 
 Use `canvas` when the user would understand the answer better by seeing it. This skill produces a self-contained HTML artifact and stops at the visual deliverable.
 
-Load `references\canvas-template.html` before drafting.
-
 ## Flow
 
 1. Confirm that the task is better explained visually than in prose.
-2. If the visual depends on facts, require a knowledge skill to gather evidence first.
+2. If the visual depends on facts, require the `learn` skill to gather evidence first.
 3. Structure the page around a banner, the main canvas, supporting details, and an object map unless the user asked for a different layout.
 4. Reuse the local canvas template as the default visual system.
 5. Produce the final HTML file and stop.

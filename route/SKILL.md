@@ -23,28 +23,25 @@ metadata:
 | Skill | Type | Owns |
 |------|------|------|
 | `route` | routing | entry point, skill selection, graph control, return to facade |
-| `microsoft-docs` | knowledge | Microsoft Learn facts, procedures, constraints, and configuration evidence |
-| `microsoft-code-reference` | knowledge | official code samples, API signatures, namespaces, packages, and usage patterns |
+| `learn` | routing | knowledge routing, evidence collection, and MCP skill orchestration |
 | `canvas` | action | browser-ready HTML canvases for workflows, structures, and process maps |
 | `wpf` | action | WPF implementation with C#, CommunityToolkit.Mvvm, DI, EF Core, and SQLite |
 
 ## Routing priority
 
-1. **Need authoritative Microsoft facts first** -> `microsoft-docs`
-2. **Need authoritative Microsoft code signatures or examples first** -> `microsoft-code-reference`
-3. **Need a visual artifact as the final deliverable** -> `canvas`
-4. **Need WPF code or file changes** -> `wpf`
+1. **Need facts, procedures, or code signatures first** -> `learn`
+2. **Need a visual artifact as the final deliverable** -> `canvas`
+3. **Need WPF code or file changes** -> `wpf`
 
-If a task needs facts before action, the knowledge step runs first.
+If a task needs facts before action, the `learn` step runs first.
 
 ## Common graphs
 
-- `route -> microsoft-docs`
-- `route -> microsoft-code-reference`
-- `route -> microsoft-docs -> wpf`
-- `route -> microsoft-code-reference -> wpf`
-- `route -> microsoft-docs -> microsoft-code-reference -> wpf`
-- `route -> microsoft-docs -> canvas`
+- `route -> learn`
+- `route -> learn -> wpf`
+- `route -> learn -> canvas`
+- `route -> wpf`
+- `route -> canvas`
 
 ## Return rule
 
