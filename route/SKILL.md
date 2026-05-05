@@ -25,7 +25,7 @@ metadata:
 | `route` | routing | entry point, skill selection, graph control, return to facade |
 | `learn` | routing | knowledge routing, evidence collection, and MCP skill orchestration |
 | `canvas` | action | browser-ready HTML canvases for workflows, structures, and process maps |
-| `wpf` | action | WPF implementation with C#, CommunityToolkit.Mvvm, DI, EF Core, and SQLite |
+| `wpf` | routing | WPF-specific routing facade for design and implementation tasks |
 
 ## Routing priority
 
