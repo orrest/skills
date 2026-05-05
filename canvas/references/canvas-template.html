@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Visual mode process template</title>
+  <title>Universal System Canvas Template</title>
   <style>
     :root {
       --page: #f6f8fc;
@@ -112,7 +112,7 @@
       margin-bottom: 18px;
     }
 
-    .flow-grid {
+    .system-canvas {
       display: grid;
       grid-template-columns: repeat(3, minmax(180px, 1fr));
       gap: 16px;
@@ -121,7 +121,7 @@
 
     .card,
     .note,
-    .object-card {
+    .element-card {
       position: relative;
       min-height: 132px;
       padding: 16px 16px 14px;
@@ -131,28 +131,14 @@
     }
 
     .card,
-    .object-card {
+    .element-card {
       box-shadow: 0 4px 18px rgba(22, 32, 51, 0.05);
-    }
-
-    .card .num {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 28px;
-      height: 28px;
-      border-radius: 50%;
-      margin-bottom: 10px;
-      background: var(--accent-soft);
-      color: var(--accent);
-      font-size: 13px;
-      font-weight: 700;
     }
 
     .card h3,
     .note h3,
     .callout h3,
-    .object-card h3 {
+    .element-card h3 {
       font-size: 16px;
       margin-bottom: 8px;
     }
@@ -160,7 +146,7 @@
     .card p,
     .note p,
     .callout p,
-    .object-card p {
+    .element-card p {
       color: var(--muted);
       font-size: 14px;
       line-height: 1.55;
@@ -173,8 +159,9 @@
     }
 
     .note {
-      background: #fffdf7;
-      border-style: dashed;
+      background: var(--accent-soft);
+      border-color: var(--accent);
+      border-style: solid;
     }
 
     .arrow {
@@ -207,7 +194,7 @@
     }
 
     .side-notes,
-    .object-grid {
+    .element-grid {
       display: grid;
       gap: 14px;
     }
@@ -229,12 +216,12 @@
       border-color: #f2dfb2;
     }
 
-    .object-grid {
+    .element-grid {
       grid-template-columns: repeat(4, minmax(180px, 1fr));
       margin-top: 8px;
     }
 
-    .object-card .label {
+    .element-card .label {
       display: inline-block;
       margin-bottom: 10px;
       padding: 5px 8px;
@@ -257,14 +244,14 @@
         grid-template-columns: 1fr;
       }
 
-      .object-grid {
+      .element-grid {
         grid-template-columns: repeat(2, minmax(180px, 1fr));
       }
     }
 
     @media (max-width: 920px) {
-      .flow-grid,
-      .object-grid {
+      .system-canvas,
+      .element-grid {
         grid-template-columns: 1fr;
       }
 
@@ -282,53 +269,40 @@
 <body>
   <div class="page">
     <section class="hero">
-      <div class="eyebrow">Visual mode template</div>
-      <h1>Process visualization template</h1>
-      <p>This example shows the default structure and inline style for process-oriented visual mode outputs.</p>
+      <div class="eyebrow">Universal System Canvas</div>
+      <h1>System Name: Mission Statement</h1>
+      <p>A concise overview of what this system achieves, describing its purpose and core value proposition.</p>
       <div class="legend">
-        <div class="pill">Header banner: title and one-line description</div>
-        <div class="pill">Main sequence: the process flow</div>
-        <div class="pill">Supporting details: parameters, conditions, and hidden information</div>
-        <div class="pill">Object map: related objects and their goals</div>
+        <div class="pill">Inputs: Triggers and resources</div>
+        <div class="pill">Objects: Core system components</div>
+        <div class="pill">Inner Relationships: Internal logic and interactions</div>
+        <div class="pill">Outputs: End artifacts and state changes</div>
       </div>
     </section>
 
     <section class="layout">
       <section class="panel">
-        <h2>Main sequence</h2>
+        <h2>Main System Canvas</h2>
 
-        <div class="flow-grid">
-          <article class="card">
-            <div class="num">1</div>
-            <h3>Receive input</h3>
-            <p>The process starts when a request, file, event, or command enters the system.</p>
-          </article>
-
-          <div class="arrow"><span>validate and classify</span></div>
-
-          <article class="card">
-            <div class="num">2</div>
-            <h3>Decide the route</h3>
-            <p>Rules, conditions, or feature flags decide whether the flow continues normally or branches.</p>
-          </article>
-
+        <div class="system-canvas">
+          <!-- Column 1: Inputs -->
           <article class="note">
-            <h3>Parameter note</h3>
-            <p>Use notes for IDs, flags, file paths, thresholds, or inputs that influence later decisions.</p>
+            <h3>Input Element</h3>
+            <p>Define the request, data, or trigger that initiates the system's operation.</p>
           </article>
 
-          <div class="arrow"><span>run the main action</span></div>
-
+          <!-- Column 2: Objects & Relationships -->
           <article class="card">
-            <div class="num">3</div>
-            <h3>Execute the core step</h3>
-            <p>The primary action runs only after the setup and branch checks are complete.</p>
+            <h3>System Object</h3>
+            <p>A core entity, actor, or component that resides within the system boundary.</p>
           </article>
 
-          <article class="card">
-            <div class="num">4</div>
-            <h3>Produce the result</h3>
-            <p>The process finishes by creating an output, updating state, or handing off to the next owner.</p>
+          <div class="arrow"><span>Interaction / Logic</span></div>
+
+          <!-- Column 3: Outputs -->
+          <article class="note">
+            <h3>Output Element</h3>
+            <p>Define the result, artifact, or side effect produced by the system.</p>
           </article>
         </div>
       </section>
@@ -338,52 +312,47 @@
         <div class="side-notes">
           <article class="callout">
             <h3>Parameters</h3>
-            <p>Use this area for inputs such as <span class="code">path</span>, <span class="code">mode</span>, or identifiers that shape the flow.</p>
+            <p>Environment variables, configuration flags, or constraints that shape the system behavior.</p>
           </article>
 
           <article class="callout warn">
-            <h3>Conditions and branches</h3>
-            <p>Call out early exits, optional paths, validation gates, or branch-specific behavior that should not be buried in the main sequence.</p>
-          </article>
-
-          <article class="callout success">
-            <h3>Hidden information</h3>
-            <p>Use this section for side effects, cleanup, background work, assumptions, or lifecycle details that matter but are easy to miss.</p>
+            <h3>Caveats & Conditions</h3>
+            <p>Assumptions, early exits, or specific requirements for the system to function correctly.</p>
           </article>
         </div>
       </aside>
     </section>
 
     <section class="panel" style="margin-top: 20px;">
-      <h2>Object map</h2>
-      <div class="object-grid">
-        <article class="object-card">
-          <div class="label">Input object</div>
-          <h3>Request</h3>
-          <p><strong>Goal:</strong> carry the data that starts the process and provides routing context.</p>
+      <h2>Element Catalog</h2>
+      <div class="element-grid">
+        <article class="element-card">
+          <div class="label">Input</div>
+          <h3>Identifier</h3>
+          <p><strong>Goal:</strong> The primary responsibility or purpose of this input element.</p>
         </article>
 
-        <article class="object-card">
-          <div class="label">Control object</div>
-          <h3>Coordinator</h3>
-          <p><strong>Goal:</strong> own the sequence and decide which branch or action runs next.</p>
+        <article class="element-card">
+          <div class="label">Object</div>
+          <h3>Component</h3>
+          <p><strong>Goal:</strong> The primary responsibility or purpose of this internal object.</p>
         </article>
 
-        <article class="object-card">
-          <div class="label">Work object</div>
-          <h3>Worker</h3>
-          <p><strong>Goal:</strong> perform the core operation that advances the process.</p>
+        <article class="element-card">
+          <div class="label">Relationship</div>
+          <h3>Interaction</h3>
+          <p><strong>Goal:</strong> How this relationship connects or processes information between objects.</p>
         </article>
 
-        <article class="object-card">
-          <div class="label">Output object</div>
+        <article class="element-card">
+          <div class="label">Output</div>
           <h3>Result</h3>
-          <p><strong>Goal:</strong> capture the finished state, visible outcome, or handoff artifact.</p>
+          <p><strong>Goal:</strong> The value or outcome delivered by this system output.</p>
         </article>
       </div>
     </section>
 
-    <div class="footer">Reference example for write visual mode</div>
+    <div class="footer">Generated by Gemini CLI Canvas Skill</div>
   </div>
 </body>
 </html>
