@@ -1,0 +1,24 @@
+{
+  "ui": {
+    "theme": "Default Light"
+  },
+  "security": {
+    "auth": {
+      "selectedType": "oauth-personal"
+    }
+  },
+  "ide": {
+    "hasSeenNudge": true
+  },
+  "mcpServers": {
+    "microsoft-learn": {
+      "url": "https://learn.microsoft.com/api/mcp"
+	},
+	"context-matic": {
+      "url": "https://chatbotapi.apimatic.io/mcp/plugins",
+      "headers": {
+        "X-Apimatic-Mcp-Client": "VsCode"
+      }
+    }
+   }
+}
