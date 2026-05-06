@@ -19,7 +19,9 @@ metadata:
      - **Commands**: Define `[RelayCommand]` methods.
    - **Services**: Define application-level services and their interfaces.
    - **DI**: Define how components will be registered in `Microsoft.Extensions.DependencyInjection`.
-   - **Persistence**: Define EF Core entities and the `DbContext` shape.
+   - **Persistence**: Define the storage strategy:
+     - **EF Core**: Entities and `DbContext` shape for SQLite.
+     - **File-based**: Serialization/Deserialization patterns (JSON/XML) for local files.
 3. **Visualize with Canvas**: Use the `canvas` skill to create a visual representation of this architecture (e.g., a process flow, component map, or wireframe).
 4. **Request Confirmation**: Present the visual design to the user and explicitly ask for confirmation to proceed to implementation.
 5. Stop once confirmation is received or if the user requests design changes.
@@ -29,7 +31,7 @@ metadata:
 - **UI**: WPF with XAML
 - **Pattern**: MVVM (CommunityToolkit.Mvvm)
 - **DI**: Microsoft.Extensions.DependencyInjection
-- **Persistence**: EF Core with SQLite
+- **Persistence**: EF Core with SQLite or File Serialization (JSON/XML)
 
 ## Hard Rules
 
@@ -40,5 +42,7 @@ metadata:
 ## Output
 
 - A summary of the designed architecture.
+- The `canvas` HTML artifact.
+- An explicit request for user confirmation for designed architecture.
 - The `canvas` HTML artifact.
 - An explicit request for user confirmation.

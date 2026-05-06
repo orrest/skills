@@ -19,7 +19,9 @@ metadata:
    - Implement ViewModels with `CommunityToolkit.Mvvm`.
    - Implement Services and Interfaces.
    - Register components in the DI container.
-   - Configure EF Core entities and `DbContext`.
+   - Configure persistence:
+     - **EF Core**: Entities and `DbContext`.
+     - **File-based**: Implementation of serialization/deserialization logic (e.g., `System.Text.Json`).
 5. Run builds or tests (if available) to verify the implementation.
 6. Return the concrete code changes and stop.
 
@@ -28,7 +30,7 @@ metadata:
 - **UI**: WPF with XAML views
 - **Presentation pattern**: MVVM with `CommunityToolkit.Mvvm`
 - **Composition**: `Microsoft.Extensions.DependencyInjection`
-- **Persistence**: `EntityFrameworkCore` with SQLite for local storage
+- **Persistence**: `EntityFrameworkCore` with SQLite or File Serialization (using `System.Text.Json` or `XmlSerializer`)
 
 ## Coding Standards
 
@@ -37,6 +39,9 @@ metadata:
   - **Example**: `[ObservableProperty] public partial string UserName { get; set; }`
 - **Commands**: Use `[RelayCommand]` on methods to generate `ICommand` properties.
 - **Dependency Injection**: Register all ViewModels and Services in the project's DI container (usually in `App.xaml.cs`).
+- **Persistence**: 
+  - For **EF Core**: Use migrations and ensure the `DbContext` is correctly configured for SQLite.
+  - For **File Persistence**: Prefer `System.Text.Json` for modern projects. Implement `async` load/save methods and handle file I/O errors gracefully.
 - **XAML Binding**: Always use `{Binding ...}` with proper `DataContext` setup (preferring DI-injected ViewModels inject to back-code of UserControl).
 
 ## Hard Rules

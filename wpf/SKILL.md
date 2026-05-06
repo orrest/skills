@@ -24,7 +24,7 @@ metadata:
 | Skill | Type | Owns |
 |------|------|------|
 | `wpf-design` | action | Architecture design, layout, and visual confirmation via `canvas` |
-| `wpf-implement` | action | Concrete code implementation, DI registration, and EF Core setup |
+| `wpf-implement` | action | Concrete code implementation, DI registration, and Local Persistence (EF Core or File Serialization) |
 
 ## Routing priority
 
