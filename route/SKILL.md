@@ -20,28 +20,38 @@ metadata:
 
 ## Local skill set
 
-| Skill | Type | Owns |
-|------|------|------|
-| `route` | routing | entry point, skill selection, graph control, return to facade |
-| `learn` | routing | knowledge routing, evidence collection, and MCP skill orchestration |
-| `canvas` | action | browser-ready HTML canvases for workflows, structures, and process maps |
-| `wpf` | routing | WPF-specific routing facade for design and implementation tasks |
+| Category | Skill | Use For |
+|----------|-------|---------|
+| **Routing** | `route` | Entry point, skill selection, graph control, and return to facade. |
+| | `learn` | Knowledge routing, evidence collection, and MCP skill orchestration. |
+| | `wpf` | WPF-specific routing facade for design and implementation tasks. |
+| **Knowledge** | `microsoft-docs` | Conceptual documentation, tutorials, and limits for Microsoft technologies. |
+| | `microsoft-code-reference` | API signatures, official code samples, and SDK details for Microsoft libraries. |
+| | `integrate-context-matic` | End-to-end integration guidance for third-party APIs (e.g., Stripe, Twilio). |
+| | `onboard-context-matic` | Interactive tours and discovery of available third-party APIs. |
+| **Action** | `canvas` | Browser-ready HTML canvases for ANY system visually—software architecture, organizational workflows, data pipelines, or physical processes. |
+| | `wpf-design` | Architecture design, layout, and visual confirmation for WPF features. |
+| | `wpf-implement` | Concrete C# and XAML code implementation for WPF features. |
 
 ## Routing priority
 
-1. **Need facts, procedures, or code signatures first** -> `learn`
-2. **Need a visual artifact as the final deliverable** -> `canvas`
-3. **Need WPF code or file changes** -> `wpf`
-
-If a task needs facts before action, the `learn` step runs first.
+1. **Need facts, signatures, or 3rd-party API info first?** -> `learn`
+    - Concepts/Tutorials? -> `learn -> microsoft-docs`
+    - API signatures/Code samples? -> `learn -> microsoft-code-reference`
+    - 3rd-party integration? -> `learn -> integrate-context-matic`
+    - Discovery/Tour of APIs? -> `learn -> onboard-context-matic`
+2. **Need a visual artifact (architecture, workflow, map) as the deliverable?** -> `canvas`
+3. **Need WPF-specific work?** -> `wpf`
+    - New feature/Refactor/UI Design? -> `wpf -> wpf-design`
+    - Bug fix/Logic/Implementation? -> `wpf -> wpf-implement`
 
 ## Common graphs
 
-- `route -> learn`
-- `route -> learn -> wpf`
-- `route -> learn -> canvas`
-- `route -> wpf`
-- `route -> canvas`
+- `route -> learn` (Pure inquiry)
+- `route -> learn -> wpf` (Grounded WPF task)
+- `route -> learn -> canvas` (Grounded visualization)
+- `route -> wpf-design -> wpf-implement` (End-to-end WPF feature)
+- `route -> learn -> integrate-context-matic` (API integration task)
 
 ## Return rule
 
