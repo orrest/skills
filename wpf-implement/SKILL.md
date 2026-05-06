@@ -2,7 +2,7 @@
 name: wpf-implement
 description: Invoke to implement a WPF design. This skill writes concrete XAML and C# code based on an approved design, following the prescribed Microsoft stack. It handles ambiguity by consulting the user or routing back to `wpf-design`.
 metadata:
-  version: "1.0.0"
+  version: "1.1.0"
 ---
 
 # WPF Implement: Build the Feature
@@ -29,6 +29,15 @@ metadata:
 - **Presentation pattern**: MVVM with `CommunityToolkit.Mvvm`
 - **Composition**: `Microsoft.Extensions.DependencyInjection`
 - **Persistence**: `EntityFrameworkCore` with SQLite for local storage
+
+## Coding Standards
+
+- **Observable Properties**: When using `CommunityToolkit.Mvvm`, always use the C# 13 partial property pattern for observable properties.
+  - **Pattern**: `[ObservableProperty] public partial <Type> <PropertyName> { get; set; }`
+  - **Example**: `[ObservableProperty] public partial string UserName { get; set; }`
+- **Commands**: Use `[RelayCommand]` on methods to generate `ICommand` properties.
+- **Dependency Injection**: Register all ViewModels and Services in the project's DI container (usually in `App.xaml.cs`).
+- **XAML Binding**: Always use `{Binding ...}` with proper `DataContext` setup (preferring DI-injected ViewModels inject to back-code of UserControl).
 
 ## Hard Rules
 

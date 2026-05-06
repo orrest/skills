@@ -2,7 +2,7 @@
 name: wpf-design
 description: Invoke to design a WPF feature or application. This skill owns architectural planning, layout design, and defining components like Views, ViewModels, Services, DI registration, and EF Core entities. It MUST use the `canvas` skill to present the design for user confirmation.
 metadata:
-  version: "1.0.0"
+  version: "1.1.0"
 ---
 
 # WPF Design: Architect the Feature
@@ -14,7 +14,9 @@ metadata:
 1. Analyze the user's WPF requirements to identify the core entities, UI needs, and application logic.
 2. Design the comprehensive architecture:
    - **Layout & Controls**: Define the XAML structure and UI elements.
-   - **MVVM**: Define Views and their corresponding ViewModels (including properties and commands).
+   - **MVVM**: Define Views and their corresponding ViewModels.
+     - **Properties**: Use the partial property pattern for `[ObservableProperty]`.
+     - **Commands**: Define `[RelayCommand]` methods.
    - **Services**: Define application-level services and their interfaces.
    - **DI**: Define how components will be registered in `Microsoft.Extensions.DependencyInjection`.
    - **Persistence**: Define EF Core entities and the `DbContext` shape.

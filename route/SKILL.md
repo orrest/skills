@@ -2,7 +2,7 @@
 name: route
 description: Invoke when the user starts from natural language and the local plugin must choose and execute the right skill path. Acts as the routing facade, selects a local worker or graph, and returns after delegated skills finish. Not for doing specialist work itself or skipping evidence when facts are required.
 metadata:
-  version: "1.0.0"
+  version: "1.1.0"
 ---
 
 # Route: Route Through the Local Skill Graph

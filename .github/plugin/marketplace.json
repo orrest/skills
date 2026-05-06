@@ -5,13 +5,13 @@
   },
   "metadata": {
     "description": "Marketplace for Orrest's GitHub Copilot CLI plugins.",
-    "version": "1.0.0"
+    "version": "1.1.0"
   },
   "plugins": [
     {
       "name": "skills",
       "description": "A GitHub Copilot CLI plugin that bundles Orrest's reusable skills.",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "source": ".",
       "repository": "https://github.com/orrest/skills.git",
       "keywords": [
@@ -20,7 +20,16 @@
         "skills"
       ],
       "skills": [
-        "route"
+        "route",
+        "learn",
+        "canvas",
+        "wpf",
+        "wpf-design",
+        "wpf-implement",
+        "microsoft-docs",
+        "microsoft-code-reference",
+        "integrate-context-matic",
+        "onboard-context-matic"
       ]
     }
   ]

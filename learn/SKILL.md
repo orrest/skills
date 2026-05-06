@@ -2,7 +2,7 @@
 name: learn
 description: Used for other skill to get facts/knowledge rather than gusses. Routes to other skills/MCP on demand to provide evidence.
 metadata:
-  version: "1.0.0"
+  version: "1.1.0"
 ---
 
 # Learn: Authoritative Knowledge Routing

@@ -2,7 +2,7 @@
 name: wpf
 description: Invoke when the user wants a WPF application or feature. Acts as the routing facade for WPF-specific tasks, selecting between design and implementation paths. Not for doing specialist work itself.
 metadata:
-  version: "1.0.0"
+  version: "1.1.0"
 ---
 
 # WPF: Route WPF Design and Implementation
