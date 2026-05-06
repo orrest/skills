@@ -32,6 +32,7 @@ metadata:
 | **Action** | `canvas` | Browser-ready HTML canvases for ANY system visually—software architecture, organizational workflows, data pipelines, or physical processes. |
 | | `wpf-design` | Architecture design, layout, and visual confirmation for WPF features. |
 | | `wpf-implement` | Concrete C# and XAML code implementation for WPF features. |
+| | `plantuml-setup` | Configures automatic PlantUML class diagram generation for .NET projects. |
 
 ## Routing priority
 
@@ -44,6 +45,7 @@ metadata:
 3. **Need WPF-specific work?** -> `wpf`
     - New feature/Refactor/UI Design? -> `wpf -> wpf-design`
     - Bug fix/Logic/Implementation? -> `wpf -> wpf-implement`
+4. **Need to generate class diagrams or setup UML automation for .NET?** -> `plantuml-setup`
 
 ## Common graphs
 
@@ -52,6 +54,7 @@ metadata:
 - `route -> learn -> canvas` (Grounded visualization)
 - `route -> wpf-design -> wpf-implement` (End-to-end WPF feature)
 - `route -> learn -> integrate-context-matic` (API integration task)
+- `route -> plantuml-setup` (UML automation task)
 
 ## Return rule
 

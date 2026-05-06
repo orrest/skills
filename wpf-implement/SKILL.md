@@ -42,7 +42,7 @@ metadata:
 - **Persistence**: 
   - For **EF Core**: Use migrations and ensure the `DbContext` is correctly configured for SQLite.
   - For **File Persistence**: Prefer `System.Text.Json` for modern projects. Implement `async` load/save methods and handle file I/O errors gracefully.
-- **XAML Binding**: Always use `{Binding ...}` with proper `DataContext` setup (preferring DI-injected ViewModels inject to back-code of UserControl).
+- **XAML Binding**: Always use `{Binding ...}` with proper `DataContext` setup (preferring ViewModels injected via DI into the View's constructor/code-behind).
 
 ## Hard Rules
 
